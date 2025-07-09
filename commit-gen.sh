@@ -10,7 +10,7 @@ do
   # Generate multiple commits per day
   for j in {1..5}
   do
-    echo "$i-$j" >> commits.txt
+    echo "$i-$j" >> commit-gen.txt
     git add commits.txt
     GIT_AUTHOR_DATE="$(date --date="$i days ago" +"%Y-%m-%dT12:00:00")" \
     GIT_COMMITTER_DATE="$(date --date="$i days ago" +"%Y-%m-%dT12:00:00")" \
